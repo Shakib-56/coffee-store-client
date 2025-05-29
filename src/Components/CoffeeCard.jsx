@@ -14,7 +14,7 @@ taste}=coffee;
       src={photo}
       alt="Movie" />
   </figure>
-  <div className='grid grid-cols-2 items-center'>
+  <div className=' w-full grid grid-cols-2 items-center'>
         <div className="card-body">
     <h2 className="card-title">Name: {name}</h2>
     <p>Taste: {taste}</p>
@@ -29,6 +29,12 @@ taste}=coffee;
         </div>
   </div>
   
+  <div>
+    <img src="" alt="" />
+  </div>
+  <div>
+    <img src="" alt="" />
+  </div>
 </div>
     );
 };
