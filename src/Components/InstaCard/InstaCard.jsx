@@ -10,9 +10,9 @@ import cofeeImage8 from "../../assets/cups/Rectangle 16.png"
 const InstaCard = () => {
     const cofeeCardsImages=[cofeeImage1,cofeeImage2,cofeeImage3,cofeeImage4,cofeeImage5,cofeeImage6,cofeeImage7,cofeeImage8]
     return (
-        <div className='grid  grid-cols-1 md:grid-cols-4 gap-4 my-5'>
+        <div className='grid  grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4 my-5'>
             {
-                cofeeCardsImages.map(singleImage=><dv><img src={singleImage} alt="" /></dv>)
+                cofeeCardsImages.map((singleImage,index)=><div key={index}><img src={singleImage} alt="" /></div>)
             }
         </div>
     );
