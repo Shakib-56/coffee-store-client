@@ -1,6 +1,7 @@
 import React from 'react';
 import navBg from "../../assets/more/15.jpg"
 import logo1 from "../../assets/more/logo1.png"
+import Banner from '../Banner/Banner';
 
 const Navbar = () => {
     return (

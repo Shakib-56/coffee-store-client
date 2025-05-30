@@ -5,7 +5,7 @@ import { MdOutlineDelete } from 'react-icons/md';
 import { Link } from 'react-router';
 import Swal from 'sweetalert2';
 
-const CoffeeCard = ({coffee}) => {
+const CoffeeCard = ({coffee,coffees,setCoffees}) => {
     const {_id,photo,price ,name,
 taste}=coffee;
 const handleDelete=(id)=>{
@@ -31,6 +31,9 @@ const handleDelete=(id)=>{
                 text: "Your Coffee has been deleted.",
                 icon: "success"
                 });
+                // remove coffee from the state
+                const remainingCoffees=coffees.filter(coffee=>coffee._id!==_id);
+                setCoffees(remainingCoffees);
             }
         })
 
@@ -58,7 +61,10 @@ const handleDelete=(id)=>{
             <button className='text-white btn max-w-20 bg-[#D2B48C]'><FaEye size={20} /></button>
 
             </Link>
+            <Link to={`/updateCoffee/${_id}`}>
             <button className='btn max-w-20 bg-gray-700 text-white'><CiEdit size={20} /></button>
+
+            </Link>
             <button onClick={()=>{
                 handleDelete(_id);
             }} className='btn max-w-20 bg-red-500 text-white'>

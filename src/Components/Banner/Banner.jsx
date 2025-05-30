@@ -4,7 +4,7 @@ import bannerImage from "../../assets/more/6.jpeg"
 const Banner = () => {
     return (
         <div
-  className="hero min-h-screen  scale-x-[-1] bg-bottom-left bg-linear-to-bl from-gray-200 to-black bg-no-repeat "
+  className=" hero min-h-screen  scale-x-[-1] bg-bottom-left bg-linear-to-bl from-gray-200 to-black bg-no-repeat "
   style={{
     backgroundImage:`url(${bannerImage})`
   }}

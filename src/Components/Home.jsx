@@ -3,12 +3,18 @@ import { useLoaderData } from 'react-router';
 import CoffeeCard from './CoffeeCard';
 import coffeeBgImage from "../assets/more/1.png"
 import InstaCard from './InstaCard/InstaCard';
+import Banner from './Banner/Banner';
+import { useState } from 'react';
 
 const Home = () => {
-    const coffees=useLoaderData();
+    const initialCoffees=useLoaderData();
+        const [coffees,setCoffees]=useState(initialCoffees)
+
     console.log(coffees);
     return (
-        <div className='max-w-full'>
+        <div >
+            
+             <Banner></Banner>
             <div className='text-center py-5'>
                 <p>-- Slip & Savor--</p>
                 <h2 className='text-3xl font-bold text-[#382828]'>Our Popular Products</h2>
@@ -17,7 +23,12 @@ const Home = () => {
                 backgroundImage:`url(${coffeeBgImage})`,
              }}>
             {
-                coffees.map(coffee=><CoffeeCard key={coffee._id} coffee={coffee}></CoffeeCard>)
+                coffees.map(coffee=><CoffeeCard 
+                    key={coffee._id}
+                    coffees={coffees}
+                    setCoffees={setCoffees}
+                     coffee={coffee}
+                     ></CoffeeCard>)
             }
         </div>
         <div className='max-w-7xl mx-auto px-20'>

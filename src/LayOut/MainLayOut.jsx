@@ -7,7 +7,7 @@ const MainLayOut = () => {
     return (
         <div>
             <Header></Header>
-            <div className='max-w-7xl mx-auto '>
+            <div className='mx-auto '>
            <Outlet></Outlet> 
 
             </div>
