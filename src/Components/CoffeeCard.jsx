@@ -21,19 +21,12 @@ taste}=coffee;
     <p>Price:{price}</p>
   </div>
         <div className='max-w-xl flex flex-col grid-cols-1 gap-4 items-center justify-center p-4'>
-            <div className='text-white btn max-w-20 bg-[#D2B48C]'><FaEye size={20} /></div>
-            <div className='btn max-w-20 bg-gray-700 text-white'><CiEdit size={20} /></div>
-            <div className='btn max-w-20 bg-red-500 text-white'>
+            <button className='text-white btn max-w-20 bg-[#D2B48C]'><FaEye size={20} /></button>
+            <button className='btn max-w-20 bg-gray-700 text-white'><CiEdit size={20} /></button>
+            <button className='btn max-w-20 bg-red-500 text-white'>
                 <MdOutlineDelete size={20} />
-            </div>
+            </button>
         </div>
-  </div>
-  
-  <div>
-    <img src="" alt="" />
-  </div>
-  <div>
-    <img src="" alt="" />
   </div>
 </div>
     );
